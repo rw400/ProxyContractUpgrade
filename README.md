@@ -13,11 +13,21 @@
  
  External storage via proxy contract
 
-# Setup
- npm install
+# Travis CI
+ eslint
  
+ build successful
+
+# Setup 
  ganache-cli
  
  truffle compile
  
  truffle migrate
+ 
+ # Redux
+  cd frontend       - redux branch
+  
+  npm start
+  
+  
