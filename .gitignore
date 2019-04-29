@@ -1,0 +1,21 @@
+node_modules/
+
+# credentials
+credentials/
+credentials/credentials.js
+
+# dotenv environment
+.env
+.cache
+
+logs
+*.log
+
+# Eslint cache
+.eslintcache
+
+.yarn-integrity
+
+
+
+

@@ -1,0 +1,1259 @@
+{
+  "contractName": "StorageState",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a7230582065dae6d31f3d3602ddfd7c96a65055606d0d569cb450ffc979dd34d6abe0a8b40029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a7230582065dae6d31f3d3602ddfd7c96a65055606d0d569cb450ffc979dd34d6abe0a8b40029",
+  "sourceMap": "58:56:7:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:56:7;;;;;;;",
+  "deployedSourceMap": "58:56:7:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"./KeyValueStorage.sol\";\n\ncontract StorageState {\n    KeyValueStorage database; \n}\n\nlibrary StorageLibrary {\n\n    event UpdateGame (bool changed);\n    \n    // struct Game {\n    //     string gameTitle;\n    //     uint gameCounter;\n    //     uint Player1Bid;\n    //     uint Player2Bid;\n    // }\n\n    // function init(Game storage self, string memory _gameTitle, uint _gameCounter) public {\n    //     self.gameTitle = _gameTitle;\n    //     self.gameCounter = _gameCounter;\n    // }\n\n    function setGame(KeyValueStorage database, string memory _gameTitle) public {\n        database.setString(keccak256(\"GameTitle\"), _gameTitle);\n\n        emit UpdateGame(true);\n    }\n\n    function getGame(KeyValueStorage database) public view returns (string memory _gametitle) {\n       \n        return database.getString(keccak256(\"GameTitle\"));\n    }\n}\n",
+  "sourcePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/StorageLibrary.sol",
+  "ast": {
+    "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/StorageLibrary.sol",
+    "exportedSymbols": {
+      "StorageLibrary": [
+        822
+      ],
+      "StorageState": [
+        781
+      ]
+    },
+    "id": 823,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 777,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/KeyValueStorage.sol",
+        "file": "./KeyValueStorage.sol",
+        "id": 778,
+        "nodeType": "ImportDirective",
+        "scope": 823,
+        "sourceUnit": 284,
+        "src": "25:31:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 781,
+        "linearizedBaseContracts": [
+          781
+        ],
+        "name": "StorageState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 780,
+            "name": "database",
+            "nodeType": "VariableDeclaration",
+            "scope": 781,
+            "src": "86:24:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+              "typeString": "contract KeyValueStorage"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 779,
+              "name": "KeyValueStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 283,
+              "src": "86:15:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                "typeString": "contract KeyValueStorage"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 823,
+        "src": "58:56:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 822,
+        "linearizedBaseContracts": [
+          822
+        ],
+        "name": "StorageLibrary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 785,
+            "name": "UpdateGame",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 784,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 783,
+                  "indexed": false,
+                  "name": "changed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 785,
+                  "src": "164:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 782,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:14:7"
+            },
+            "src": "146:32:7"
+          },
+          {
+            "body": {
+              "id": 805,
+              "nodeType": "Block",
+              "src": "597:103:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "47616d655469746c65",
+                            "id": 796,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "636:11:7",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            },
+                            "value": "GameTitle"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            }
+                          ],
+                          "id": 795,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 831,
+                          "src": "626:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 797,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "626:22:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 798,
+                        "name": "_gameTitle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 789,
+                        "src": "650:10:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 792,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 787,
+                        "src": "607:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 794,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 212,
+                      "src": "607:18:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bytes32,string memory) external"
+                      }
+                    },
+                    "id": 799,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "607:54:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 800,
+                  "nodeType": "ExpressionStatement",
+                  "src": "607:54:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 802,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "688:4:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 801,
+                      "name": "UpdateGame",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 785,
+                      "src": "677:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 803,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "677:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 804,
+                  "nodeType": "EmitStatement",
+                  "src": "672:21:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 806,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setGame",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 790,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 787,
+                  "name": "database",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "538:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                    "typeString": "contract KeyValueStorage"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 786,
+                    "name": "KeyValueStorage",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 283,
+                    "src": "538:15:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                      "typeString": "contract KeyValueStorage"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 789,
+                  "name": "_gameTitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "564:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 788,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "564:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "537:52:7"
+            },
+            "returnParameters": {
+              "id": 791,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "597:0:7"
+            },
+            "scope": 822,
+            "src": "521:179:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 820,
+              "nodeType": "Block",
+              "src": "796:74:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "47616d655469746c65",
+                            "id": 816,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "850:11:7",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            },
+                            "value": "GameTitle"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            }
+                          ],
+                          "id": 815,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 831,
+                          "src": "840:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 817,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "840:22:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 813,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 808,
+                        "src": "821:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 814,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "821:18:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
+                        "typeString": "function (bytes32) view external returns (string memory)"
+                      }
+                    },
+                    "id": 818,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "821:42:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 812,
+                  "id": 819,
+                  "nodeType": "Return",
+                  "src": "814:49:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 821,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGame",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 809,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 808,
+                  "name": "database",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 821,
+                  "src": "723:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                    "typeString": "contract KeyValueStorage"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 807,
+                    "name": "KeyValueStorage",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 283,
+                    "src": "723:15:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                      "typeString": "contract KeyValueStorage"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "722:26:7"
+            },
+            "returnParameters": {
+              "id": 812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 811,
+                  "name": "_gametitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 821,
+                  "src": "770:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 810,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:26:7"
+            },
+            "scope": 822,
+            "src": "706:164:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 823,
+        "src": "116:756:7"
+      }
+    ],
+    "src": "0:873:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/StorageLibrary.sol",
+    "exportedSymbols": {
+      "StorageLibrary": [
+        822
+      ],
+      "StorageState": [
+        781
+      ]
+    },
+    "id": 823,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 777,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:7"
+      },
+      {
+        "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/KeyValueStorage.sol",
+        "file": "./KeyValueStorage.sol",
+        "id": 778,
+        "nodeType": "ImportDirective",
+        "scope": 823,
+        "sourceUnit": 284,
+        "src": "25:31:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 781,
+        "linearizedBaseContracts": [
+          781
+        ],
+        "name": "StorageState",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 780,
+            "name": "database",
+            "nodeType": "VariableDeclaration",
+            "scope": 781,
+            "src": "86:24:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+              "typeString": "contract KeyValueStorage"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 779,
+              "name": "KeyValueStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 283,
+              "src": "86:15:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                "typeString": "contract KeyValueStorage"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 823,
+        "src": "58:56:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 822,
+        "linearizedBaseContracts": [
+          822
+        ],
+        "name": "StorageLibrary",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 785,
+            "name": "UpdateGame",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 784,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 783,
+                  "indexed": false,
+                  "name": "changed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 785,
+                  "src": "164:12:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 782,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:14:7"
+            },
+            "src": "146:32:7"
+          },
+          {
+            "body": {
+              "id": 805,
+              "nodeType": "Block",
+              "src": "597:103:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "47616d655469746c65",
+                            "id": 796,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "636:11:7",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            },
+                            "value": "GameTitle"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            }
+                          ],
+                          "id": 795,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 831,
+                          "src": "626:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 797,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "626:22:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 798,
+                        "name": "_gameTitle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 789,
+                        "src": "650:10:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 792,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 787,
+                        "src": "607:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 794,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 212,
+                      "src": "607:18:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bytes32,string memory) external"
+                      }
+                    },
+                    "id": 799,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "607:54:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 800,
+                  "nodeType": "ExpressionStatement",
+                  "src": "607:54:7"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 802,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "688:4:7",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 801,
+                      "name": "UpdateGame",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 785,
+                      "src": "677:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 803,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "677:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 804,
+                  "nodeType": "EmitStatement",
+                  "src": "672:21:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 806,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setGame",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 790,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 787,
+                  "name": "database",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "538:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                    "typeString": "contract KeyValueStorage"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 786,
+                    "name": "KeyValueStorage",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 283,
+                    "src": "538:15:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                      "typeString": "contract KeyValueStorage"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 789,
+                  "name": "_gameTitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "564:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 788,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "564:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "537:52:7"
+            },
+            "returnParameters": {
+              "id": 791,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "597:0:7"
+            },
+            "scope": 822,
+            "src": "521:179:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 820,
+              "nodeType": "Block",
+              "src": "796:74:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "47616d655469746c65",
+                            "id": 816,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "850:11:7",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            },
+                            "value": "GameTitle"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                              "typeString": "literal_string \"GameTitle\""
+                            }
+                          ],
+                          "id": 815,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 831,
+                          "src": "840:9:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 817,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "840:22:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 813,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 808,
+                        "src": "821:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 814,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "821:18:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
+                        "typeString": "function (bytes32) view external returns (string memory)"
+                      }
+                    },
+                    "id": 818,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "821:42:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 812,
+                  "id": 819,
+                  "nodeType": "Return",
+                  "src": "814:49:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 821,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGame",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 809,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 808,
+                  "name": "database",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 821,
+                  "src": "723:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                    "typeString": "contract KeyValueStorage"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 807,
+                    "name": "KeyValueStorage",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 283,
+                    "src": "723:15:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                      "typeString": "contract KeyValueStorage"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "722:26:7"
+            },
+            "returnParameters": {
+              "id": 812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 811,
+                  "name": "_gametitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 821,
+                  "src": "770:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 810,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:26:7"
+            },
+            "scope": 822,
+            "src": "706:164:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 823,
+        "src": "116:756:7"
+      }
+    ],
+    "src": "0:873:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-04-29T03:18:35.222Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

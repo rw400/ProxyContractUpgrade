@@ -1,0 +1,3430 @@
+{
+  "contractName": "LogicV1",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "num",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMaxPlayers",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x288dee3b"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getMaxPlayers",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x8cbd9eb8"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "gameTitle",
+          "type": "string"
+        }
+      ],
+      "name": "setGameTitle",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x96fe3863"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getGameTitle",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xc68b6c36"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "deleteGameTitle",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xebb008ce"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "player1Bid",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPlayer1Bid",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x97653053"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPlayer1Bid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x3e1b1258"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "player2Bid",
+          "type": "uint256"
+        }
+      ],
+      "name": "setPlayer2Bid",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x495e13b5"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPlayer2Bid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x98106a60"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610d9e806100206000396000f3fe608060405260043610610099576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063288dee3b1461009e5780633e1b1258146100d9578063495e13b5146101045780638cbd9eb81461013f57806396fe38631461016a578063976530531461023257806398106a601461026d578063c68b6c3614610298578063ebb008ce14610328575b600080fd5b3480156100aa57600080fd5b506100d7600480360360208110156100c157600080fd5b81019080803590602001909291905050506103f0565b005b3480156100e557600080fd5b506100ee6104c3565b6040518082815260200191505060405180910390f35b34801561011057600080fd5b5061013d6004803603602081101561012757600080fd5b81019080803590602001909291905050506105b3565b005b34801561014b57600080fd5b506101546106fe565b6040518082815260200191505060405180910390f35b34801561017657600080fd5b506102306004803603602081101561018d57600080fd5b81019080803590602001906401000000008111156101aa57600080fd5b8201836020820111156101bc57600080fd5b803590602001918460018302840111640100000000831117156101de57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506107ee565b005b34801561023e57600080fd5b5061026b6004803603602081101561025557600080fd5b8101908080359060200190929190505050610926565b005b34801561027957600080fd5b50610282610a71565b6040518082815260200191505060405180910390f35b3480156102a457600080fd5b506102ad610b61565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102ed5780820151818401526020810190506102d2565b50505050905090810190601f16801561031a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561033457600080fd5b506103ee6004803603602081101561034b57600080fd5b810190808035906020019064010000000081111561036857600080fd5b82018360208201111561037a57600080fd5b8035906020019184600183028401116401000000008311171561039c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610ca7565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663e2a4853a826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c61796572416d6f756e740000000000000000000000000000000000000000815250602001828152602001915050600060405180830381600087803b1580156104a857600080fd5b505af11580156104bc573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bd02d0f56040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723142696400000000000000000000000000000000000000000000815250602001905060206040518083038186803b15801561057357600080fd5b505afa158015610587573d6000803e3d6000fd5b505050506040513d602081101561059d57600080fd5b8101908080519060200190929190505050905090565b60008111151561062b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f696e76616c69642062696400000000000000000000000000000000000000000081525060200191505060405180910390fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663e2a4853a826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723242696400000000000000000000000000000000000000000000815250602001828152602001915050600060405180830381600087803b1580156106e357600080fd5b505af11580156106f7573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bd02d0f56040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c61796572416d6f756e740000000000000000000000000000000000000000815250602001905060206040518083038186803b1580156107ae57600080fd5b505afa1580156107c2573d6000803e3d6000fd5b505050506040513d60208110156107d857600080fd5b8101908080519060200190929190505050905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636e899550826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f47616d655469746c65000000000000000000000000000000000000000000000081525060200180602001828103825283818151815260200191508051906020019080838360005b838110156108bf5780820151818401526020810190506108a4565b50505050905090810190601f1680156108ec5780820380516001836020036101000a031916815260200191505b5092505050600060405180830381600087803b15801561090b57600080fd5b505af115801561091f573d6000803e3d6000fd5b5050505050565b60008111151561099e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f696e76616c69642062696400000000000000000000000000000000000000000081525060200191505060405180910390fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663e2a4853a826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723142696400000000000000000000000000000000000000000000815250602001828152602001915050600060405180830381600087803b158015610a5657600080fd5b505af1158015610a6a573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bd02d0f56040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723242696400000000000000000000000000000000000000000000815250602001905060206040518083038186803b158015610b2157600080fd5b505afa158015610b35573d6000803e3d6000fd5b505050506040513d6020811015610b4b57600080fd5b8101908080519060200190929190505050905090565b60606000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663986e791a6040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f47616d655469746c650000000000000000000000000000000000000000000000815250602001905060006040518083038186803b158015610c1157600080fd5b505afa158015610c25573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052506020811015610c4f57600080fd5b810190808051640100000000811115610c6757600080fd5b82810190506020810184811115610c7d57600080fd5b8151856001820283011164010000000082111715610c9a57600080fd5b5050929190505050905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f6bb3cc46040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f47616d655469746c6500000000000000000000000000000000000000000000008152506020019050600060405180830381600087803b158015610d5757600080fd5b505af1158015610d6b573d6000803e3d6000fd5b505050505056fea165627a7a72305820afd749d4a6d19f1906e722b9e664411f8d655b626b96a4e16ec8f6ddaef5e0210029",
+  "deployedBytecode": "0x608060405260043610610099576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063288dee3b1461009e5780633e1b1258146100d9578063495e13b5146101045780638cbd9eb81461013f57806396fe38631461016a578063976530531461023257806398106a601461026d578063c68b6c3614610298578063ebb008ce14610328575b600080fd5b3480156100aa57600080fd5b506100d7600480360360208110156100c157600080fd5b81019080803590602001909291905050506103f0565b005b3480156100e557600080fd5b506100ee6104c3565b6040518082815260200191505060405180910390f35b34801561011057600080fd5b5061013d6004803603602081101561012757600080fd5b81019080803590602001909291905050506105b3565b005b34801561014b57600080fd5b506101546106fe565b6040518082815260200191505060405180910390f35b34801561017657600080fd5b506102306004803603602081101561018d57600080fd5b81019080803590602001906401000000008111156101aa57600080fd5b8201836020820111156101bc57600080fd5b803590602001918460018302840111640100000000831117156101de57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506107ee565b005b34801561023e57600080fd5b5061026b6004803603602081101561025557600080fd5b8101908080359060200190929190505050610926565b005b34801561027957600080fd5b50610282610a71565b6040518082815260200191505060405180910390f35b3480156102a457600080fd5b506102ad610b61565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102ed5780820151818401526020810190506102d2565b50505050905090810190601f16801561031a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561033457600080fd5b506103ee6004803603602081101561034b57600080fd5b810190808035906020019064010000000081111561036857600080fd5b82018360208201111561037a57600080fd5b8035906020019184600183028401116401000000008311171561039c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610ca7565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663e2a4853a826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c61796572416d6f756e740000000000000000000000000000000000000000815250602001828152602001915050600060405180830381600087803b1580156104a857600080fd5b505af11580156104bc573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bd02d0f56040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723142696400000000000000000000000000000000000000000000815250602001905060206040518083038186803b15801561057357600080fd5b505afa158015610587573d6000803e3d6000fd5b505050506040513d602081101561059d57600080fd5b8101908080519060200190929190505050905090565b60008111151561062b576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f696e76616c69642062696400000000000000000000000000000000000000000081525060200191505060405180910390fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663e2a4853a826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723242696400000000000000000000000000000000000000000000815250602001828152602001915050600060405180830381600087803b1580156106e357600080fd5b505af11580156106f7573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bd02d0f56040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c61796572416d6f756e740000000000000000000000000000000000000000815250602001905060206040518083038186803b1580156107ae57600080fd5b505afa1580156107c2573d6000803e3d6000fd5b505050506040513d60208110156107d857600080fd5b8101908080519060200190929190505050905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636e899550826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f47616d655469746c65000000000000000000000000000000000000000000000081525060200180602001828103825283818151815260200191508051906020019080838360005b838110156108bf5780820151818401526020810190506108a4565b50505050905090810190601f1680156108ec5780820380516001836020036101000a031916815260200191505b5092505050600060405180830381600087803b15801561090b57600080fd5b505af115801561091f573d6000803e3d6000fd5b5050505050565b60008111151561099e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f696e76616c69642062696400000000000000000000000000000000000000000081525060200191505060405180910390fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663e2a4853a826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723142696400000000000000000000000000000000000000000000815250602001828152602001915050600060405180830381600087803b158015610a5657600080fd5b505af1158015610a6a573d6000803e3d6000fd5b5050505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663bd02d0f56040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f506c617965723242696400000000000000000000000000000000000000000000815250602001905060206040518083038186803b158015610b2157600080fd5b505afa158015610b35573d6000803e3d6000fd5b505050506040513d6020811015610b4b57600080fd5b8101908080519060200190929190505050905090565b60606000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663986e791a6040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f47616d655469746c650000000000000000000000000000000000000000000000815250602001905060006040518083038186803b158015610c1157600080fd5b505afa158015610c25573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052506020811015610c4f57600080fd5b810190808051640100000000811115610c6757600080fd5b82810190506020810184811115610c7d57600080fd5b8151856001820283011164010000000082111715610c9a57600080fd5b5050929190505050905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663f6bb3cc46040518163ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180807f47616d655469746c6500000000000000000000000000000000000000000000008152506020019050600060405180830381600087803b158015610d5757600080fd5b505af1158015610d6b573d6000803e3d6000fd5b505050505056fea165627a7a72305820afd749d4a6d19f1906e722b9e664411f8d655b626b96a4e16ec8f6ddaef5e0210029",
+  "sourceMap": "82:1204:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:1204:1;;;;;;;",
+  "deployedSourceMap": "82:1204:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;158:97;;8:9:-1;5:2;;;30:1;27;20:12;5:2;158:97:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;158:97:1;;;;;;;;;;;;;;;;;;;;894:109;;8:9:-1;5:2;;;30:1;27;20:12;5:2;894:109:1;;;;;;;;;;;;;;;;;;;;;;;1009:159;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1009:159:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1009:159:1;;;;;;;;;;;;;;;;;;;;261:111;;8:9:-1;5:2;;;30:1;27;20:12;5:2;261:111:1;;;;;;;;;;;;;;;;;;;;;;;378:113;;8:9:-1;5:2;;;30:1;27;20:12;5:2;378:113:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;378:113:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;378:113:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;378:113:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;378:113:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;378:113:1;;;;;;;;;;;;;;;;;;729:159;;8:9:-1;5:2;;;30:1;27;20:12;5:2;729:159:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;729:159:1;;;;;;;;;;;;;;;;;;;;1174:109;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1174:109:1;;;;;;;;;;;;;;;;;;;;;;;497:115;;8:9:-1;5:2;;;30:1;27;20:12;5:2;497:115:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;497:115:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;618:105;;8:9:-1;5:2;;;30:1;27;20:12;5:2;618:105:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;618:105:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;618:105:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;618:105:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;618:105:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;618:105:1;;;;;;;;;;;;;;;;;;158:97;211:8;;;;;;;;;;;:16;;;244:3;211:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;211:37:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;211:37:1;;;;158:97;:::o;894:109::-;940:7;966:8;;;;;;;;;;;:16;;;:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;966:30:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;966:30:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;966:30:1;;;;;;;;;;;;;;;;959:37;;894:109;:::o;1009:159::-;1091:1;1078:10;:14;1069:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1119:8;;;;;;;;;;;:16;;;1150:10;1119:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1119:42:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1119:42:1;;;;1009:159;:::o;261:111::-;307:7;333:8;;;;;;;;;;;:16;;;:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;333:32:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;333:32:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;333:32:1;;;;;;;;;;;;;;;;326:39;;261:111;:::o;378:113::-;442:8;;;;;;;;;;;:18;;;474:9;442:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;442:42:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;442:42:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;442:42:1;;;;378:113;:::o;729:159::-;811:1;798:10;:14;789:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;839:8;;;;;;;;;;;:16;;;870:10;839:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;839:42:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;839:42:1;;;;729:159;:::o;1174:109::-;1220:7;1246:8;;;;;;;;;;;:16;;;:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1246:30:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1246:30:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1246:30:1;;;;;;;;;;;;;;;;1239:37;;1174:109;:::o;497:115::-;542:13;574:8;;;;;;;;;;;:18;;;:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;574:31:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;574:31:1;;;;;;39:16:-1;36:1;17:17;2:54;574:31:1;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;13:2;8:3;5:11;2:2;;;29:1;26;19:12;2:2;574:31:1;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;574:31:1;;;;;;567:38;;497:115;:::o;618:105::-;682:8;;;;;;;;;;;:21;;;:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;682:34:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;682:34:1;;;;618:105;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"./SafeMath.sol\";\nimport \"./StorageLibrary.sol\";\n\ncontract LogicV1 is StorageState {\n    using SafeMath for uint256;\n    \n    function setMaxPlayers(uint256 num) public {\n        database.setUint(\"PlayerAmount\", num);\n    }\n\n    function getMaxPlayers() view public returns (uint256) {\n        return database.getUint(\"PlayerAmount\");\n    }\n\n    function setGameTitle(string memory gameTitle) public {\n        database.setString(\"GameTitle\", gameTitle);\n    }\n\n    function getGameTitle() view public returns (string memory) {\n        return database.getString(\"GameTitle\");\n    }\n\n    function deleteGameTitle(string memory) public {\n        return database.deleteString(\"GameTitle\");\n    }\n\n    function setPlayer1Bid(uint256 player1Bid) public {\n        require (player1Bid > 0 , \"invalid bid\");\n        database.setUint(\"Player1Bid\", player1Bid);\n    }\n\n    function getPlayer1Bid() view public returns (uint256) {\n        return database.getUint(\"Player1Bid\");\n    }\n\n    function setPlayer2Bid(uint256 player2Bid) public {\n        require (player2Bid > 0 , \"invalid bid\");\n        database.setUint(\"Player2Bid\", player2Bid);\n    }\n\n    function getPlayer2Bid() view public returns (uint256) {\n        return database.getUint(\"Player2Bid\");\n    }\n\n}",
+  "sourcePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/LogicV1.sol",
+  "ast": {
+    "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/LogicV1.sol",
+    "exportedSymbols": {
+      "LogicV1": [
+        414
+      ]
+    },
+    "id": 415,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 285,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 286,
+        "nodeType": "ImportDirective",
+        "scope": 415,
+        "sourceUnit": 776,
+        "src": "25:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/StorageLibrary.sol",
+        "file": "./StorageLibrary.sol",
+        "id": 287,
+        "nodeType": "ImportDirective",
+        "scope": 415,
+        "sourceUnit": 823,
+        "src": "50:30:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 288,
+              "name": "StorageState",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 781,
+              "src": "102:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StorageState_$781",
+                "typeString": "contract StorageState"
+              }
+            },
+            "id": 289,
+            "nodeType": "InheritanceSpecifier",
+            "src": "102:12:1"
+          }
+        ],
+        "contractDependencies": [
+          781
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 414,
+        "linearizedBaseContracts": [
+          414,
+          781
+        ],
+        "name": "LogicV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 292,
+            "libraryName": {
+              "contractScope": null,
+              "id": 290,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 775,
+              "src": "127:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$775",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "121:27:1",
+            "typeName": {
+              "id": 291,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "140:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 304,
+              "nodeType": "Block",
+              "src": "201:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c61796572416d6f756e74",
+                        "id": 300,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "228:14:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        },
+                        "value": "PlayerAmount"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 301,
+                        "name": "num",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 294,
+                        "src": "244:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 297,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "211:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 299,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 178,
+                      "src": "211:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (bytes32,uint256) external"
+                      }
+                    },
+                    "id": 302,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "211:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 303,
+                  "nodeType": "ExpressionStatement",
+                  "src": "211:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 305,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMaxPlayers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 294,
+                  "name": "num",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 305,
+                  "src": "181:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 293,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "181:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "180:13:1"
+            },
+            "returnParameters": {
+              "id": 296,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:0:1"
+            },
+            "scope": 414,
+            "src": "158:97:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 315,
+              "nodeType": "Block",
+              "src": "316:56:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c61796572416d6f756e74",
+                        "id": 312,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "350:14:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        },
+                        "value": "PlayerAmount"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 310,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "333:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 311,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 97,
+                      "src": "333:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) view external returns (uint256)"
+                      }
+                    },
+                    "id": 313,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "333:32:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 309,
+                  "id": 314,
+                  "nodeType": "Return",
+                  "src": "326:39:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 316,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMaxPlayers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "283:2:1"
+            },
+            "returnParameters": {
+              "id": 309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 308,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 316,
+                  "src": "307:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 307,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "306:9:1"
+            },
+            "scope": 414,
+            "src": "261:111:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 328,
+              "nodeType": "Block",
+              "src": "432:59:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "47616d655469746c65",
+                        "id": 324,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "461:11:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        "value": "GameTitle"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 325,
+                        "name": "gameTitle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 318,
+                        "src": "474:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 321,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "442:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 323,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 212,
+                      "src": "442:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bytes32,string memory) external"
+                      }
+                    },
+                    "id": 326,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "442:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 327,
+                  "nodeType": "ExpressionStatement",
+                  "src": "442:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 329,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setGameTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 318,
+                  "name": "gameTitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 329,
+                  "src": "400:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 317,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:25:1"
+            },
+            "returnParameters": {
+              "id": 320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:0:1"
+            },
+            "scope": 414,
+            "src": "378:113:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 339,
+              "nodeType": "Block",
+              "src": "557:55:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "47616d655469746c65",
+                        "id": 336,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "593:11:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        "value": "GameTitle"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 334,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "574:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 335,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "574:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
+                        "typeString": "function (bytes32) view external returns (string memory)"
+                      }
+                    },
+                    "id": 337,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "574:31:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 333,
+                  "id": 338,
+                  "nodeType": "Return",
+                  "src": "567:38:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 340,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGameTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 330,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "518:2:1"
+            },
+            "returnParameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 332,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 340,
+                  "src": "542:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "541:15:1"
+            },
+            "scope": 414,
+            "src": "497:115:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 350,
+              "nodeType": "Block",
+              "src": "665:58:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "47616d655469746c65",
+                        "id": 347,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "704:11:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        "value": "GameTitle"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 345,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "682:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 346,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "deleteString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 282,
+                      "src": "682:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32) external"
+                      }
+                    },
+                    "id": 348,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "682:34:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 344,
+                  "id": 349,
+                  "nodeType": "Return",
+                  "src": "675:41:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 351,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deleteGameTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 342,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 351,
+                  "src": "643:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 341,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "643:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "642:15:1"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "665:0:1"
+            },
+            "scope": 414,
+            "src": "618:105:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 370,
+              "nodeType": "Block",
+              "src": "779:109:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 359,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 357,
+                          "name": "player1Bid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 353,
+                          "src": "798:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 358,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "811:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "798:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "696e76616c696420626964",
+                        "id": 360,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "815:13:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        },
+                        "value": "invalid bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        }
+                      ],
+                      "id": 356,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        840,
+                        841
+                      ],
+                      "referencedDeclaration": 841,
+                      "src": "789:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 361,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "789:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 362,
+                  "nodeType": "ExpressionStatement",
+                  "src": "789:40:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657231426964",
+                        "id": 366,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "856:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        },
+                        "value": "Player1Bid"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 367,
+                        "name": "player1Bid",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 353,
+                        "src": "870:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 363,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "839:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 365,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 178,
+                      "src": "839:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (bytes32,uint256) external"
+                      }
+                    },
+                    "id": 368,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "839:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 369,
+                  "nodeType": "ExpressionStatement",
+                  "src": "839:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 371,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPlayer1Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 354,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 353,
+                  "name": "player1Bid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 371,
+                  "src": "752:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 352,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "752:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "751:20:1"
+            },
+            "returnParameters": {
+              "id": 355,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "779:0:1"
+            },
+            "scope": 414,
+            "src": "729:159:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 381,
+              "nodeType": "Block",
+              "src": "949:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657231426964",
+                        "id": 378,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "983:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        },
+                        "value": "Player1Bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 376,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "966:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 377,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 97,
+                      "src": "966:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) view external returns (uint256)"
+                      }
+                    },
+                    "id": 379,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "966:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 375,
+                  "id": 380,
+                  "nodeType": "Return",
+                  "src": "959:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 382,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlayer1Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "916:2:1"
+            },
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 374,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "940:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 373,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "940:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "939:9:1"
+            },
+            "scope": 414,
+            "src": "894:109:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 401,
+              "nodeType": "Block",
+              "src": "1059:109:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 390,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 388,
+                          "name": "player2Bid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 384,
+                          "src": "1078:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 389,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1091:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "1078:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "696e76616c696420626964",
+                        "id": 391,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1095:13:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        },
+                        "value": "invalid bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        }
+                      ],
+                      "id": 387,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        840,
+                        841
+                      ],
+                      "referencedDeclaration": 841,
+                      "src": "1069:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 392,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1069:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 393,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1069:40:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657232426964",
+                        "id": 397,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1136:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        },
+                        "value": "Player2Bid"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 398,
+                        "name": "player2Bid",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 384,
+                        "src": "1150:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 394,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "1119:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 396,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 178,
+                      "src": "1119:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (bytes32,uint256) external"
+                      }
+                    },
+                    "id": 399,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1119:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 400,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1119:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 402,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPlayer2Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 385,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 384,
+                  "name": "player2Bid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 402,
+                  "src": "1032:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 383,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1032:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1031:20:1"
+            },
+            "returnParameters": {
+              "id": 386,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1059:0:1"
+            },
+            "scope": 414,
+            "src": "1009:159:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 412,
+              "nodeType": "Block",
+              "src": "1229:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657232426964",
+                        "id": 409,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1263:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        },
+                        "value": "Player2Bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 407,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "1246:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 408,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 97,
+                      "src": "1246:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) view external returns (uint256)"
+                      }
+                    },
+                    "id": 410,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1246:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 406,
+                  "id": 411,
+                  "nodeType": "Return",
+                  "src": "1239:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 413,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlayer2Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 403,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1196:2:1"
+            },
+            "returnParameters": {
+              "id": 406,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 405,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 413,
+                  "src": "1220:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 404,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1220:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1219:9:1"
+            },
+            "scope": 414,
+            "src": "1174:109:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 415,
+        "src": "82:1204:1"
+      }
+    ],
+    "src": "0:1286:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/LogicV1.sol",
+    "exportedSymbols": {
+      "LogicV1": [
+        414
+      ]
+    },
+    "id": 415,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 285,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 286,
+        "nodeType": "ImportDirective",
+        "scope": 415,
+        "sourceUnit": 776,
+        "src": "25:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/linux/Documents/George Brown/Dapps2/proxyUpgrade/contracts/StorageLibrary.sol",
+        "file": "./StorageLibrary.sol",
+        "id": 287,
+        "nodeType": "ImportDirective",
+        "scope": 415,
+        "sourceUnit": 823,
+        "src": "50:30:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 288,
+              "name": "StorageState",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 781,
+              "src": "102:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StorageState_$781",
+                "typeString": "contract StorageState"
+              }
+            },
+            "id": 289,
+            "nodeType": "InheritanceSpecifier",
+            "src": "102:12:1"
+          }
+        ],
+        "contractDependencies": [
+          781
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 414,
+        "linearizedBaseContracts": [
+          414,
+          781
+        ],
+        "name": "LogicV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 292,
+            "libraryName": {
+              "contractScope": null,
+              "id": 290,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 775,
+              "src": "127:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$775",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "121:27:1",
+            "typeName": {
+              "id": 291,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "140:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "body": {
+              "id": 304,
+              "nodeType": "Block",
+              "src": "201:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c61796572416d6f756e74",
+                        "id": 300,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "228:14:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        },
+                        "value": "PlayerAmount"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 301,
+                        "name": "num",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 294,
+                        "src": "244:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 297,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "211:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 299,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 178,
+                      "src": "211:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (bytes32,uint256) external"
+                      }
+                    },
+                    "id": 302,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "211:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 303,
+                  "nodeType": "ExpressionStatement",
+                  "src": "211:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 305,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMaxPlayers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 294,
+                  "name": "num",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 305,
+                  "src": "181:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 293,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "181:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "180:13:1"
+            },
+            "returnParameters": {
+              "id": 296,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "201:0:1"
+            },
+            "scope": 414,
+            "src": "158:97:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 315,
+              "nodeType": "Block",
+              "src": "316:56:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c61796572416d6f756e74",
+                        "id": 312,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "350:14:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        },
+                        "value": "PlayerAmount"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_4d0761b03fec893f4bec16f2395ac72bd208b65bebbff06754f4f0d5a46ab90b",
+                          "typeString": "literal_string \"PlayerAmount\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 310,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "333:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 311,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 97,
+                      "src": "333:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) view external returns (uint256)"
+                      }
+                    },
+                    "id": 313,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "333:32:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 309,
+                  "id": 314,
+                  "nodeType": "Return",
+                  "src": "326:39:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 316,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMaxPlayers",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "283:2:1"
+            },
+            "returnParameters": {
+              "id": 309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 308,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 316,
+                  "src": "307:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 307,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "306:9:1"
+            },
+            "scope": 414,
+            "src": "261:111:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 328,
+              "nodeType": "Block",
+              "src": "432:59:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "47616d655469746c65",
+                        "id": 324,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "461:11:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        "value": "GameTitle"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 325,
+                        "name": "gameTitle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 318,
+                        "src": "474:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 321,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "442:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 323,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 212,
+                      "src": "442:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bytes32,string memory) external"
+                      }
+                    },
+                    "id": 326,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "442:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 327,
+                  "nodeType": "ExpressionStatement",
+                  "src": "442:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 329,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setGameTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 318,
+                  "name": "gameTitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 329,
+                  "src": "400:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 317,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "400:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "399:25:1"
+            },
+            "returnParameters": {
+              "id": 320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "432:0:1"
+            },
+            "scope": 414,
+            "src": "378:113:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 339,
+              "nodeType": "Block",
+              "src": "557:55:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "47616d655469746c65",
+                        "id": 336,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "593:11:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        "value": "GameTitle"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 334,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "574:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 335,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "574:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
+                        "typeString": "function (bytes32) view external returns (string memory)"
+                      }
+                    },
+                    "id": 337,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "574:31:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 333,
+                  "id": 338,
+                  "nodeType": "Return",
+                  "src": "567:38:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 340,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGameTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 330,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "518:2:1"
+            },
+            "returnParameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 332,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 340,
+                  "src": "542:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "541:15:1"
+            },
+            "scope": 414,
+            "src": "497:115:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 350,
+              "nodeType": "Block",
+              "src": "665:58:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "47616d655469746c65",
+                        "id": 347,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "704:11:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        },
+                        "value": "GameTitle"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_a0f10706d2395978acceca2efffe41587c4494590aac701d75f66f12c0d2cd0b",
+                          "typeString": "literal_string \"GameTitle\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 345,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "682:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 346,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "deleteString",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 282,
+                      "src": "682:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32) external"
+                      }
+                    },
+                    "id": 348,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "682:34:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 344,
+                  "id": 349,
+                  "nodeType": "Return",
+                  "src": "675:41:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 351,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deleteGameTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 342,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 351,
+                  "src": "643:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 341,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "643:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "642:15:1"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "665:0:1"
+            },
+            "scope": 414,
+            "src": "618:105:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 370,
+              "nodeType": "Block",
+              "src": "779:109:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 359,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 357,
+                          "name": "player1Bid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 353,
+                          "src": "798:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 358,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "811:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "798:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "696e76616c696420626964",
+                        "id": 360,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "815:13:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        },
+                        "value": "invalid bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        }
+                      ],
+                      "id": 356,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        840,
+                        841
+                      ],
+                      "referencedDeclaration": 841,
+                      "src": "789:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 361,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "789:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 362,
+                  "nodeType": "ExpressionStatement",
+                  "src": "789:40:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657231426964",
+                        "id": 366,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "856:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        },
+                        "value": "Player1Bid"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 367,
+                        "name": "player1Bid",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 353,
+                        "src": "870:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 363,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "839:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 365,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 178,
+                      "src": "839:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (bytes32,uint256) external"
+                      }
+                    },
+                    "id": 368,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "839:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 369,
+                  "nodeType": "ExpressionStatement",
+                  "src": "839:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 371,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPlayer1Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 354,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 353,
+                  "name": "player1Bid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 371,
+                  "src": "752:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 352,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "752:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "751:20:1"
+            },
+            "returnParameters": {
+              "id": 355,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "779:0:1"
+            },
+            "scope": 414,
+            "src": "729:159:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 381,
+              "nodeType": "Block",
+              "src": "949:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657231426964",
+                        "id": 378,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "983:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        },
+                        "value": "Player1Bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_e03e4b443274cfa3c8d703b31b66a9d08b3082b2035d1530fac4600d8a45299b",
+                          "typeString": "literal_string \"Player1Bid\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 376,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "966:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 377,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 97,
+                      "src": "966:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) view external returns (uint256)"
+                      }
+                    },
+                    "id": 379,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "966:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 375,
+                  "id": 380,
+                  "nodeType": "Return",
+                  "src": "959:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 382,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlayer1Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "916:2:1"
+            },
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 374,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "940:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 373,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "940:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "939:9:1"
+            },
+            "scope": 414,
+            "src": "894:109:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 401,
+              "nodeType": "Block",
+              "src": "1059:109:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 390,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 388,
+                          "name": "player2Bid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 384,
+                          "src": "1078:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 389,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1091:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "1078:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "696e76616c696420626964",
+                        "id": 391,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1095:13:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        },
+                        "value": "invalid bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_052f0198aaf8011197f0a587485e4d2f99657c8be10e5b76b291c1d9edf43881",
+                          "typeString": "literal_string \"invalid bid\""
+                        }
+                      ],
+                      "id": 387,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        840,
+                        841
+                      ],
+                      "referencedDeclaration": 841,
+                      "src": "1069:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 392,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1069:40:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 393,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1069:40:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657232426964",
+                        "id": 397,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1136:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        },
+                        "value": "Player2Bid"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 398,
+                        "name": "player2Bid",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 384,
+                        "src": "1150:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 394,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "1119:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 396,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "setUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 178,
+                      "src": "1119:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (bytes32,uint256) external"
+                      }
+                    },
+                    "id": 399,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1119:42:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 400,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1119:42:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 402,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPlayer2Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 385,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 384,
+                  "name": "player2Bid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 402,
+                  "src": "1032:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 383,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1032:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1031:20:1"
+            },
+            "returnParameters": {
+              "id": 386,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1059:0:1"
+            },
+            "scope": 414,
+            "src": "1009:159:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 412,
+              "nodeType": "Block",
+              "src": "1229:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "506c6179657232426964",
+                        "id": 409,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1263:12:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        },
+                        "value": "Player2Bid"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_850c287aa7a9f6f318bd96849d2feab02fe6d30d8345132d635c1eca5108c209",
+                          "typeString": "literal_string \"Player2Bid\""
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 407,
+                        "name": "database",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 780,
+                        "src": "1246:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_KeyValueStorage_$283",
+                          "typeString": "contract KeyValueStorage"
+                        }
+                      },
+                      "id": 408,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getUint",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 97,
+                      "src": "1246:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
+                        "typeString": "function (bytes32) view external returns (uint256)"
+                      }
+                    },
+                    "id": 410,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1246:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 406,
+                  "id": 411,
+                  "nodeType": "Return",
+                  "src": "1239:37:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 413,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlayer2Bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 403,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1196:2:1"
+            },
+            "returnParameters": {
+              "id": 406,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 405,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 413,
+                  "src": "1220:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 404,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1220:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1219:9:1"
+            },
+            "scope": 414,
+            "src": "1174:109:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 415,
+        "src": "82:1204:1"
+      }
+    ],
+    "src": "0:1286:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "1556475006672": {
+      "events": {},
+      "links": {},
+      "address": "0x4F6E6d4ceEb55875FFEd9579D17Cd4824c364B2F",
+      "transactionHash": "0x8da139a643e0122a4cef9a4c8d838ef8f470a5b384f643633c1a956063aae903"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-04-29T03:24:05.870Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
