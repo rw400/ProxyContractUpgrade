@@ -3,5 +3,11 @@ language: node_js
 node_js:
   - node
 
-script:
-  - npm run lint
+script: {
+  "start": "./node_modules/.bin/webpack -d --watch | nodemon server/
+    index.js --inspect",
+  "start-client": "./node_modules/.bin/webpack -d --watch",
+  "start-server":nodemon server/index.js --inspect",
+  "test": "eslint **/*.js --ignore-pattern 'node_modules /'
+    --ignore-pattern 'tests/' --ignore-pattern 'server/workers.js'"
+}
